@@ -4,20 +4,34 @@
 // parámetro, debe devolverme [3, 4, 5] y, si no le paso nada como parámetro, debe
 // devolverme solo el 5.
 
-let arr = [1, 2, 3, 4, 5]
+// let arr = [1, 2, 3, 4, 5]
 
-const arrFromEnd = (arr, x=1) => {
-    arr.toString()
-    console.log(arr.slice(-x))
-}
+// const arrFromEnd = (arr, x=1) => {
+//     arr.toString()
+//     console.log(arr.slice(-x))
+// }
 
-arrFromEnd(arr, 3)
-arrFromEnd(arr)
+// arrFromEnd(arr, 3)
+// arrFromEnd(arr)
 
 
 // 2. Escribe una función que, dado un array de números, devuelva una string con todos
-// esos números e inserte guiones entre los números pares. Es decir, dado el array [0, 2,
-// 3, 4, 6, 7, 8], me devolvería “0 2 3 4-6 7 8”
+// esos números e inserte guiones entre los números pares. Es decir, dado el array [0, 2, 3, 4, 6, 7, 8], 
+// me devolvería “0 2 3 4-6 7 8”
+
+let arr = [0, 2, 3, 4, 6, 7, 8, 10, 11, 13, 14, 16, 18, 19]
+const arrWithHyphen = (arr) => {
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0 && arr[i] != 0 && arr[i + 1] % 2 == 0) {
+            arr[i] = arr[i]+"-"
+        }
+    }
+    return arr.join(" ").replaceAll("- ", "-")
+}
+console.log(arrWithHyphen(arr))
+
+
 // 3. Dado un array con elementos repetidos, determina qué elemento es el más frecuente
 // y cuántas veces se ha repetido
 // 4. Dada una string, crea una función que cambie todas sus mayúsculas a minúsculas y
