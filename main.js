@@ -193,25 +193,37 @@
 
 // 14. Escribe una función que determine la palabra más larga de una string.
 
+// let frase = "que la fuerza te acompañe"
+
+// const palabraLarga = (frase) => {
+
+//     let arr = frase.split(" ")
+//     let current = arr[0]
+//     arr.map((el, i) => {
+
+//         if (el.length > current.length) {
+//             current = arr[i]
+
+//         } else {
+//             return false
+//         }
+//     })
+//     console.log( "La palabra más larga de la frase es: " + current )
+// }
+// palabraLarga(frase)
+
+
+// 15. Crea una función que, dada una string, cuente cuántas vocales hay en la misma y devuelva el resultado
+
 let frase = "que la fuerza te acompañe"
-
-const palabraLarga = (frase) => {
-
-    let arr = frase.split(" ")
-    let current = arr[0]
-    arr.map((el, i) => {
-
-        if (el.length > current.length) {
-            current = arr[i]
-
-        } else {
-            return false
+let count = 0
+const contarVocales = (arr) => {
+    for (ch of arr) {
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            count++
         }
-
-    })
-    console.log( "La palabra más larga de la frase es: " + current )
+    }
+    return console.log(`En esta frase hay ${count} vocales`)
 }
-palabraLarga(frase)
 
-
-
+contarVocales(frase)
