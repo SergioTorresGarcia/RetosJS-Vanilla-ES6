@@ -51,15 +51,31 @@
 //     }
 // }
 
-// 4. Dada una string, crea una función que cambie todas sus mayúsculas a minúsculas y todas sus minúsculas a mayúsculas y devuelva una nueva string.(“Hola” devolvería “hOLA”)
+// 4. Dada una string, crea una función que cambie todas sus mayúsculas a minúsculas y todas sus minúsculas a mayúsculas 
+// y devuelva una nueva string.(“Hola” devolvería “hOLA”)
 
-let newWord = ""
+// let newWord = ""
 
-const caseChange = (word) => {
+// const caseChange = (word) => {
     
-    for (ch of word){
-        (ch == ch.toLowerCase()) ? newWord += ch.toUpperCase() : newWord += ch.toLowerCase()
+//     for (ch of word){
+//         (ch == ch.toLowerCase()) ? newWord += ch.toUpperCase() : newWord += ch.toLowerCase()
+//     }
+//     return newWord
+// }
+// console.log(caseChange("Hola Caracola"))
+
+// 5. Crea una función que, dado el siguiente array: [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]] 
+// saque por consola cada uno de sus arrays interiores separados por indicadores con el número de fila
+
+let arr = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]] 
+
+const print = (arr) => {
+    for (x in arr) {
+        console.log("Fila", parseInt(x)+1)
+        for (y of arr[x]) {
+            console.log(y)
+        }
     }
-    return newWord
 }
-console.log(caseChange("Hola Caracola"))
+print(arr)
