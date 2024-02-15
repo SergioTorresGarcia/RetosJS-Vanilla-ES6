@@ -128,9 +128,24 @@
 
 // 9. Crea una función que determine si un array contiene cierto elemento, pasando ambos como argumentos a la misma
 
-const comprobar = (arr, el) => {
-    for (x of arr) {
-        (el == x) ? console.log(`${el} es parte del array`) : ""
+// const comprobar = (arr, el) => {
+//     for (x of arr) {
+//         (el == x) ? console.log(`${el} es parte del array`) : ""
+//     }
+// }
+// comprobar([1, 3, 5, 7, 9], 7)
+
+
+// 10. Escribe una función que rellene un array con un determinado número de elementos y pasa ambas cosas por parámetro. 
+// Es decir, la ejecución de rellenar(3, 4) sería [4, 4, 4]
+
+let arr = []
+
+const rellenar = (times, el) => {
+    for (i = 0; i < times; i++) {
+        arr.push(el)
     }
+    console.log(arr)
 }
-comprobar([1, 3, 5, 7, 9], 7)
+
+rellenar(3, 4)
