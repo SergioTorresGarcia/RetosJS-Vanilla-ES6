@@ -180,12 +180,38 @@
 // 13. Escribe una función que, al pasarle un array como argumento, determine qué elementos de
 // ese array son números y devuelva la suma de los mismos.
 
-let array = [5, "5", "palabra", true, 4, 2, 9]
-const separaYSuma = (arr) => {
-    let total = 0
-    for (el of arr) {
-        typeof(el) == "number" ? total += el : ""
-    }
-    return total
+// let array = [5, "5", "palabra", true, 4, 2, 9]
+// const separaYSuma = (arr) => {
+//     let total = 0
+//     for (el of arr) {
+//         typeof(el) == "number" ? total += el : ""
+//     }
+//     return total
+// }
+// console.log(separaYSuma(array))
+
+
+// 14. Escribe una función que determine la palabra más larga de una string.
+
+let frase = "que la fuerza te acompañe"
+
+const palabraLarga = (frase) => {
+
+    let arr = frase.split(" ")
+    let current = arr[0]
+    arr.map((el, i) => {
+
+        if (el.length > current.length) {
+            current = arr[i]
+
+        } else {
+            return false
+        }
+
+    })
+    console.log( "La palabra más larga de la frase es: " + current )
 }
-console.log(separaYSuma(array))
+palabraLarga(frase)
+
+
+
