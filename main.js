@@ -153,11 +153,30 @@
 
 // 11. Escribe una función para intercambiar las posiciones de dos elementos en un array.
 
-let arr = [1, 2, 3, 4, 5]
-const intercambiar = (a, b, arr) => {
-    if(arr.length >= a && arr.length >= b) {
-        [arr[a], arr[b]] = [arr[b], arr[a]]
-        console.log(arr)
+// let arr = [1, 2, 3, 4, 5]
+// const intercambiar = (a, b, arr) => {
+//     if(arr.length >= a && arr.length >= b) {
+//         [arr[a], arr[b]] = [arr[b], arr[a]]
+//         console.log(arr)
+//     }
+// }
+// intercambiar(1, 3, arr)
+
+
+// 12. Escribe una función que genere un array de números y pásale por parámetro el número inicial
+//y el largo del array. El array resultante debe ir sumando de uno en uno hasta alcanzar el largo deseado.
+
+let arr = []
+
+const generarArray = (num, l) => {
+    for (let i = num; i< (num +l); i ++) {
+        arr.push(i)
     }
+    return arr
 }
-intercambiar(1, 3, arr)
+console.log(generarArray(5, 7))
+
+
+
+
+
