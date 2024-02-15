@@ -39,7 +39,7 @@
 // let count = 0
 
 // for (let i = 0; i<arr.length; i++) {
-    
+
 //     if(arr[i] != current) {
 //         if (count > 0) {
 //             console.log("number", current, "appears", count, "times")
@@ -57,7 +57,7 @@
 // let newWord = ""
 
 // const caseChange = (word) => {
-    
+
 //     for (ch of word){
 //         (ch == ch.toLowerCase()) ? newWord += ch.toUpperCase() : newWord += ch.toLowerCase()
 //     }
@@ -93,17 +93,35 @@
 
 // 7. Crea una función que, dados un array y uno de sus elementos, elimine ese elemento del array
 
-let arr = [1, 2, 1, 24]
-let el = 1
-let arr2 = []
+// let arr = [1, 2, 1, 24]
+// let el = 1
+// let arr2 = []
 
-const quitar = (arr, el) => {
-    for (x of arr) {
-        if (x != el) { 
-            arr2.push(x)
-        }
-    }
-    console.log(arr2)
-}
+// const quitar = (arr, el) => {
+//     for (x of arr) {
+//         if (x != el) { 
+//             arr2.push(x)
+//         }
+//     }
+//     console.log(arr2)
+// }
 
-quitar(arr, el)
+// quitar(arr, el)
+
+// 8. Crea una función que, dados dos arrays, devuelva un único array con ambos arrays
+// concatenados pero que elimine los elementos repetidos de los mismos.
+
+// let arr1 = [2, 2, 1, 24]
+// let arr2 = [8, 11, 9, 1]
+// let newArr = []
+
+// const concatenar = (arr1, arr2) => {
+//     let arr = arr1.concat(arr2) //joins both arrays in one
+//     for (el of arr) {
+//         if (!newArr.includes(el)) { // if the number is not in the new array, then it pushes it, if it is already there, then doesn´t
+//             newArr.push(el)
+//         }
+//     }
+//     console.log(newArr)
+// }
+// concatenar(arr1, arr2)
