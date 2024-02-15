@@ -19,21 +19,37 @@
 // esos números e inserte guiones entre los números pares. Es decir, dado el array [0, 2, 3, 4, 6, 7, 8], 
 // me devolvería “0 2 3 4-6 7 8”
 
-let arr = [0, 2, 3, 4, 6, 7, 8, 10, 11, 13, 14, 16, 18, 19]
-const arrWithHyphen = (arr) => {
+// let arr = [0, 2, 3, 4, 6, 7, 8, 10, 11, 13, 14, 16, 18, 19]
+// const arrWithHyphen = (arr) => {
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 == 0 && arr[i] != 0 && arr[i + 1] % 2 == 0) {
-            arr[i] = arr[i]+"-"
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 == 0 && arr[i] != 0 && arr[i + 1] % 2 == 0) {
+//             arr[i] = arr[i]+"-"
+//         }
+//     }
+//     return arr.join(" ").replaceAll("- ", "-")
+// }
+// console.log(arrWithHyphen(arr))
+
+
+// 3. Dado un array con elementos repetidos, determina qué elemento es el más frecuente y cuántas veces se ha repetido
+
+let arr = [2, 4, 5, 8, 4, 4, 9, 2].sort()
+let current
+let count = 0
+
+for (let i = 0; i<arr.length; i++) {
+    
+    if(arr[i] != current) {
+        if (count > 0) {
+            console.log("number", current, "appears", count, "times")
         }
+        current = arr[i]
+        count = 1
+    } else {
+        count ++
     }
-    return arr.join(" ").replaceAll("- ", "-")
 }
-console.log(arrWithHyphen(arr))
 
+// 4. Dada una string, crea una función que cambie todas sus mayúsculas a minúsculas y todas sus minúsculas a mayúsculas y devuelva una nueva string.(“Hola” devolvería “hOLA”)
 
-// 3. Dado un array con elementos repetidos, determina qué elemento es el más frecuente
-// y cuántas veces se ha repetido
-// 4. Dada una string, crea una función que cambie todas sus mayúsculas a minúsculas y
-// todas sus minúsculas a mayúsculas y devuelva una nueva string.(“Hola” devolvería
-// “hOLA”)
