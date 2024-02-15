@@ -34,22 +34,32 @@
 
 // 3. Dado un array con elementos repetidos, determina qué elemento es el más frecuente y cuántas veces se ha repetido
 
-let arr = [2, 4, 5, 8, 4, 4, 9, 2].sort()
-let current
-let count = 0
+// let arr = [2, 4, 5, 8, 4, 4, 9, 2].sort()
+// let current
+// let count = 0
 
-for (let i = 0; i<arr.length; i++) {
+// for (let i = 0; i<arr.length; i++) {
     
-    if(arr[i] != current) {
-        if (count > 0) {
-            console.log("number", current, "appears", count, "times")
-        }
-        current = arr[i]
-        count = 1
-    } else {
-        count ++
-    }
-}
+//     if(arr[i] != current) {
+//         if (count > 0) {
+//             console.log("number", current, "appears", count, "times")
+//         }
+//         current = arr[i]
+//         count = 1
+//     } else {
+//         count ++
+//     }
+// }
 
 // 4. Dada una string, crea una función que cambie todas sus mayúsculas a minúsculas y todas sus minúsculas a mayúsculas y devuelva una nueva string.(“Hola” devolvería “hOLA”)
 
+let newWord = ""
+
+const caseChange = (word) => {
+    
+    for (ch of word){
+        (ch == ch.toLowerCase()) ? newWord += ch.toUpperCase() : newWord += ch.toLowerCase()
+    }
+    return newWord
+}
+console.log(caseChange("Hola Caracola"))
