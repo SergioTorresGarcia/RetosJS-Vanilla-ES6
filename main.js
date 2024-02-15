@@ -215,15 +215,32 @@
 
 // 15. Crea una función que, dada una string, cuente cuántas vocales hay en la misma y devuelva el resultado
 
-let frase = "que la fuerza te acompañe"
-let count = 0
-const contarVocales = (arr) => {
-    for (ch of arr) {
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-            count++
-        }
-    }
-    return console.log(`En esta frase hay ${count} vocales`)
-}
+// let frase = "que la fuerza te acompañe"
+// let count = 0
+// const contarVocales = (arr) => {
+//     for (ch of arr) {
+//         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+//             count++
+//         }
+//     }
+//     return console.log(`En esta frase hay ${count} vocales`)
+// }
 
-contarVocales(frase)
+// contarVocales(frase)
+
+
+// 16. Crea una función que genere una contraseña aleatoria. Debes pasar por parámetro la cantidad
+// de caracteres que quieres que tenga la contraseña.
+
+let password = ""
+
+const contrasenya = (l) => {
+    for (let i=0; i<l; i++) {
+        password += Math.floor(Math.random()*10)
+    }
+    console.log(`The automatically generated ${l} character password is: '${password}'`)
+}
+contrasenya(8)
+
+
+
