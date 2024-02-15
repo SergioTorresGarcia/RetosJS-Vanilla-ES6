@@ -125,3 +125,12 @@
 //     console.log(newArr)
 // }
 // concatenar(arr1, arr2)
+
+// 9. Crea una función que determine si un array contiene cierto elemento, pasando ambos como argumentos a la misma
+
+const comprobar = (arr, el) => {
+    for (x of arr) {
+        (el == x) ? console.log(`${el} es parte del array`) : ""
+    }
+}
+comprobar([1, 3, 5, 7, 9], 7)
