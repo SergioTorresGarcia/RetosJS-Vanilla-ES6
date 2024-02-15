@@ -139,13 +139,25 @@
 // 10. Escribe una función que rellene un array con un determinado número de elementos y pasa ambas cosas por parámetro. 
 // Es decir, la ejecución de rellenar(3, 4) sería [4, 4, 4]
 
-let arr = []
+// let arr = []
 
-const rellenar = (times, el) => {
-    for (i = 0; i < times; i++) {
-        arr.push(el)
+// const rellenar = (times, el) => {
+//     for (i = 0; i < times; i++) {
+//         arr.push(el)
+//     }
+//     console.log(arr)
+// }
+
+// rellenar(3, 4)
+
+
+// 11. Escribe una función para intercambiar las posiciones de dos elementos en un array.
+
+let arr = [1, 2, 3, 4, 5]
+const intercambiar = (a, b, arr) => {
+    if(arr.length >= a && arr.length >= b) {
+        [arr[a], arr[b]] = [arr[b], arr[a]]
+        console.log(arr)
     }
-    console.log(arr)
 }
-
-rellenar(3, 4)
+intercambiar(1, 3, arr)
