@@ -166,17 +166,26 @@
 // 12. Escribe una función que genere un array de números y pásale por parámetro el número inicial
 //y el largo del array. El array resultante debe ir sumando de uno en uno hasta alcanzar el largo deseado.
 
-let arr = []
+// let arr = []
 
-const generarArray = (num, l) => {
-    for (let i = num; i< (num +l); i ++) {
-        arr.push(i)
+// const generarArray = (num, l) => {
+//     for (let i = num; i< (num +l); i ++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// console.log(generarArray(5, 7))
+
+
+// 13. Escribe una función que, al pasarle un array como argumento, determine qué elementos de
+// ese array son números y devuelva la suma de los mismos.
+
+let array = [5, "5", "palabra", true, 4, 2, 9]
+const separaYSuma = (arr) => {
+    let total = 0
+    for (el of arr) {
+        typeof(el) == "number" ? total += el : ""
     }
-    return arr
+    return total
 }
-console.log(generarArray(5, 7))
-
-
-
-
-
+console.log(separaYSuma(array))
