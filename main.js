@@ -82,11 +82,28 @@
 
 // 6. Escribe una función que devuelva los años bisiestos en cierto rango de años.
 
-const bisiestos = (a, b) => {
-    for (let i = a; i <= b; i++) {
-        if (i % 4 == 0) {
-            console.log(i, " es año bisiesto")
-        } 
+// const bisiestos = (a, b) => {
+//     for (let i = a; i <= b; i++) {
+//         if (i % 4 == 0) {
+//             console.log(i, " es año bisiesto")
+//         } 
+//     }
+// }
+// bisiestos(2000, 2024)
+
+// 7. Crea una función que, dados un array y uno de sus elementos, elimine ese elemento del array
+
+let arr = [1, 2, 1, 24]
+let el = 1
+let arr2 = []
+
+const quitar = (arr, el) => {
+    for (x of arr) {
+        if (x != el) { 
+            arr2.push(x)
+        }
     }
+    console.log(arr2)
 }
-bisiestos(2000, 2024)
+
+quitar(arr, el)
