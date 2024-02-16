@@ -232,15 +232,48 @@
 // 16. Crea una función que genere una contraseña aleatoria. Debes pasar por parámetro la cantidad
 // de caracteres que quieres que tenga la contraseña.
 
-let password = ""
+// let password = ""
 
-const contrasenya = (l) => {
-    for (let i=0; i<l; i++) {
-        password += Math.floor(Math.random()*10)
+// const contrasenya = (l) => {
+//     for (let i=0; i<l; i++) {
+//         password += Math.floor(Math.random()*10)
+//     }
+//     console.log(`The automatically generated ${l} character password is: '${password}'`)
+// }
+// contrasenya(8)
+
+
+// 17. Crea una función reloj que vaya desde las 23:58:00 hasta las 00:00:00 y saque por consola
+// cada segundo y minuto entre ambas.
+
+const reloj = () => {
+    let hh = 23
+    let mm = 58
+    let ss = 0
+    console.log("START>>")
+    console.log("")
+    for (let m = 58; m <= 60; m++) {
+        if (m == 60) { mm = 0 }
+        mm = m
+
+        for (let s = 0; s < 60; s++) {
+            if (s == 60) { ss = 0 }
+            ss = s
+
+            let hora = hh.toString().replace("24", "00")
+            let minutos = mm.toString().padStart(2, "0").replace("60", "00")
+            let segundos = ss.toString().padStart(2, "0").replace("60", "00")
+
+            console.log(`${hora}:${minutos}:${segundos}`)
+
+            if (mm == 59 && ss == 59) {
+                console.log(('00:' + '00:' + '00'))
+                console.log("")
+                return console.log(">>END")
+            }
+        }
     }
-    console.log(`The automatically generated ${l} character password is: '${password}'`)
+    console.log("END")
 }
-contrasenya(8)
-
-
+reloj()
 
