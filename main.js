@@ -295,13 +295,29 @@
 
 // 19. Escribe una función que sume todos sus argumentos, independientemente de cuántos sean
 
-const Sumar = (a, b, ...nums) => {
-    let arr = [a, b, ...nums]
+// const Sumar = (a, b, ...nums) => {
+//     let arr = [a, b, ...nums]
 
+//     let total = 0
+//     for (x of arr) {
+//         total += x
+//     }
+//     return total
+// }
+// console.log(Sumar(2, 3, 5, 4, 2))
+
+
+// 20. Escribe una función que me diga si un alumno está aprobado o no, a la cual puedo pasar
+// cualquier cantidad de notas como parámetro
+
+const Aprovado = (...args) => {
+    let arr = [...args]
     let total = 0
     for (x of arr) {
         total += x
     }
-    return total
+    let media = total / arr.length
+    return media >= 5 ? `aprovado con una nota de ${media}` : `suspenso con una nota de ${media}`
 }
-console.log(Sumar(2, 3, 5, 4, 2))
+console.log(Aprovado(2, 3, 8, 9, 2))
+console.log(Aprovado(2, 8, 9, 3))
