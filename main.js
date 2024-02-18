@@ -402,11 +402,40 @@
 // 24. Dado el array de nombres ["mara", "pAblo", "juan", "MARCOS"], devuelve otro en que la
 // primera letra de cada uno sea mayúscula y el resto minúsculas
 
-let arr = ["mara", "pAblo", "juan", "MARCOS"]
+// let arr = ["mara", "pAblo", "juan", "MARCOS"]
 
-let fixNames = (arr) => {
-    let lower = arr.map(e => e.toLowerCase())
-    let caps = lower.map(e => e.replace(e[0], e[0].toUpperCase()))
-    return caps
-}
-console.log(fixNames(arr))
+// let fixNames = (arr) => {
+//     let lower = arr.map(e => e.toLowerCase())
+//     let caps = lower.map(e => e.replace(e[0], e[0].toUpperCase()))
+//     return caps
+// }
+// console.log(fixNames(arr))
+
+
+// 25. Crea un array con únicamente los nombres de los siguientes objetos
+// Además, saca un array únicamente con los nombres de los mayores de 30
+
+let personas = [
+    { nombre: "Mara", edad: 30 },
+    { nombre: "Pablo", edad: 35 },
+    { nombre: "Juan", edad: 26 },
+    { nombre: "Marta", edad: 56 },
+    { nombre: "Rodrigo", edad: 31 },
+]
+
+const nombres = []
+personas.map(e => nombres.push(e.nombre))
+
+const noms30 = []
+personas.map(e => { if (e.edad > 30) { noms30.push(e.nombre) } })
+
+console.log(nombres)
+console.log(noms30)
+
+
+
+
+
+
+
+
