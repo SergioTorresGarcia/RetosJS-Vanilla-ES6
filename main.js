@@ -385,19 +385,28 @@
 // objetos excluyendo la edad de la persona. Es decir, debo ver todas las propiedades de cada objeto
 // menos la edad. Hazlo utilizando el operador ...
 
-let personas = [
-    { nombre: 'Nombre1', apellido: 'Apellido1', direccion: 'carrer 1', telefono: 666111666, smthelse: 'pin' },
-    { nombre: 'Nombre2', apellido: 'Apellido2', direccion: 'carrer 2', telefono: 666222666, smthelse: 'pan' },
-    { nombre: 'Nombre3', apellido: 'Apellido3', direccion: 'carrer 3', telefono: 666333666, smthelse: 'pun' }
-]
+// let personas = [
+//     { nombre: 'Nombre1', apellido: 'Apellido1', direccion: 'carrer 1', telefono: 666111666, smthelse: 'pin' },
+//     { nombre: 'Nombre2', apellido: 'Apellido2', direccion: 'carrer 2', telefono: 666222666, smthelse: 'pan' },
+//     { nombre: 'Nombre3', apellido: 'Apellido3', direccion: 'carrer 3', telefono: 666333666, smthelse: 'pun' }
+// ]
 
-const sinEdad = (arr, apellido) => {
-    return arr.map(
-        ({ apellido, ...rest }) => rest
-    )
+// const sinEdad = (arr, apellido) => {
+//     return arr.map(
+//         ({ apellido, ...rest }) => rest
+//     )
+// }
+// console.log(sinEdad(personas))
+
+
+// 24. Dado el array de nombres ["mara", "pAblo", "juan", "MARCOS"], devuelve otro en que la
+// primera letra de cada uno sea mayúscula y el resto minúsculas
+
+let arr = ["mara", "pAblo", "juan", "MARCOS"]
+
+let fixNames = (arr) => {
+    let lower = arr.map(e => e.toLowerCase())
+    let caps = lower.map(e => e.replace(e[0], e[0].toUpperCase()))
+    return caps
 }
-console.log(sinEdad(personas))
-
-
-
-
+console.log(fixNames(arr))
