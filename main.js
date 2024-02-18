@@ -415,22 +415,33 @@
 // 25. Crea un array con únicamente los nombres de los siguientes objetos
 // Además, saca un array únicamente con los nombres de los mayores de 30
 
-let personas = [
-    { nombre: "Mara", edad: 30 },
-    { nombre: "Pablo", edad: 35 },
-    { nombre: "Juan", edad: 26 },
-    { nombre: "Marta", edad: 56 },
-    { nombre: "Rodrigo", edad: 31 },
-]
+// let personas = [
+//     { nombre: "Mara", edad: 30 },
+//     { nombre: "Pablo", edad: 35 },
+//     { nombre: "Juan", edad: 26 },
+//     { nombre: "Marta", edad: 56 },
+//     { nombre: "Rodrigo", edad: 31 },
+// ]
+// const nombres = []
+// personas.map(e => nombres.push(e.nombre))
 
-const nombres = []
-personas.map(e => nombres.push(e.nombre))
+// const noms30 = []
+// personas.map(e => { if (e.edad > 30) { noms30.push(e.nombre) } })
 
-const noms30 = []
-personas.map(e => { if (e.edad > 30) { noms30.push(e.nombre) } })
+// console.log(nombres)
+// console.log(noms30)
 
-console.log(nombres)
-console.log(noms30)
+
+// 26. Dado un array de números, crea una función que sume solo los pares
+
+let arr = [2, 2, 1, 24, 8, 11, 9, 4]
+let total = 0
+
+const SumaPares = (arr) => {
+    arr.map(e => (e % 2 == 0) ? total += e : total += 0)
+    return total
+}
+console.log(SumaPares(arr))
 
 
 
