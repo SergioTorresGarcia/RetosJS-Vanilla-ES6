@@ -281,15 +281,27 @@
 // 18. Escribe una función que compruebe si un objeto tiene determinada propiedad (pasando como
 // parámetro el objeto y la propiedad en cuestión)
 
-const checkProps = (objeto, prop) => {
-    return prop in objeto ? `el objeto tiene la propiedad ${prop}` : `el objeto no tiene a propiedad ${prop}`
+// const checkProps = (objeto, prop) => {
+//     return prop in objeto ? `el objeto tiene la propiedad ${prop}` : `el objeto no tiene a propiedad ${prop}`
+// }
+// const persona = {
+//     nombre: "Sergio",
+//     edad: 40
+// }
+
+// console.log(checkProps(persona, "edad"))
+// console.log(checkProps(persona, "altura"))
+
+
+// 19. Escribe una función que sume todos sus argumentos, independientemente de cuántos sean
+
+const Sumar = (a, b, ...nums) => {
+    let arr = [a, b, ...nums]
+
+    let total = 0
+    for (x of arr) {
+        total += x
+    }
+    return total
 }
-const persona = {
-    nombre: "Sergio",
-    edad: 40
-}
-
-console.log(checkProps(persona, "edad"))
-console.log(checkProps(persona, "altura"))
-
-
+console.log(Sumar(2, 3, 5, 4, 2))
