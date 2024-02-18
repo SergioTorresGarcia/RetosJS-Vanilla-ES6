@@ -326,16 +326,58 @@
 // 21. Escribe una función que reciba un array de números como argumento y saque la diferencia
 // entre el número más alto y el más bajo del mismo. Utiliza el operador ...
 
+// const Resta = (arr) => {
+//     let arr1 = arr.sort(function (a, b) { return a - b })
 
-const Resta = (arr) => {
-    // let arr1 = []
-    // for (x of arr) { arr1.push(parseInt(x)) }
-    let arr1 = arr.sort(function (a, b) { return a - b })
+//     return eval(arr1[arr1.length - 1] - arr1[0])
+// }
+// console.log(Resta([12, 98, 27, 9]))
 
-    return eval(arr1[arr1.length - 1] - arr1[0])
+
+// 22. Crea dos arrays de objetos. El primero debe contener los nombres y apellidos de por lo menos
+// tres personas. El segundo debe contener otros datos de esas mismas personas, como su dirección
+// y su número de teléfono. Utiliza una función para combinar ambos arrays y obtener un array nuevo
+// en que cada objeto contiene toda la información de cada persona.
+
+let arr1 = [
+    { nombre: "Nombre1", apellido: "Apellido1" },
+    { nombre: "Nombre2", apellido: "Apellido2" },
+    { nombre: "Nombre3", apellido: "Apellido3" }
+]
+let arr2 = [
+    { direccion: "carrer 1", telefono: 666111666, smthelse: "pin" },
+    { direccion: "carrer 2", telefono: 666222666, smthelse: "pan" },
+    { direccion: "carrer 3", telefono: 666333666, smthelse: "pun" }
+]
+
+// usando map()
+const juntarArrays1 = (arr1, arr2) => {
+    if (arr1.length == arr2.length) {
+        return arr1.map((persona, i) => {
+
+            const personas = { ...persona, ...arr2[i] }
+            return personas
+        })
+    } else {
+        console.log("Data incomplete (arrays with different lengths)")
+    }
 }
-console.log(Resta([12, 98, 27, 9]))
 
+// usando for
+const juntarArrays2 = (arr1, arr2) => {
+    if (arr1.length == arr2.length) {
+        const personas = [];
 
+        for (let i = 0; i < arr1.length; i++) {
+            personas.push({ ...arr1[i], ...arr2[i] });
+        }
+
+        return personas;
+    } else {
+        console.log("Data incomplete (arrays with different lengths)")
+    }
+}
+console.log(juntarArrays1(arr1, arr2))
+console.log(juntarArrays2(arr1, arr2))
 
 
