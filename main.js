@@ -428,8 +428,8 @@
 // const noms30 = []
 // personas.map(e => { if (e.edad > 30) { noms30.push(e.nombre) } })
 
-// console.log(nombres)
-// console.log(noms30)
+console.log(nombres)
+console.log(noms30)
 
 
 // 26. Dado un array de números, crea una función que sume solo los pares
