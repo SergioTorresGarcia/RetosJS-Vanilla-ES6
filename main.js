@@ -434,15 +434,23 @@
 
 // 26. Dado un array de números, crea una función que sume solo los pares
 
-let arr = [2, 2, 1, 24, 8, 11, 9, 4]
-let total = 0
+// let arr = [2, 2, 1, 24, 8, 11, 9, 4]
+// let total = 0
 
-const SumaPares = (arr) => {
-    arr.map(e => (e % 2 == 0) ? total += e : total += 0)
-    return total
-}
-console.log(SumaPares(arr))
+// const SumaPares = (arr) => {
+//     arr.map(e => (e % 2 == 0) ? total += e : total += 0)
+//     return total
+// }
+// console.log(SumaPares(arr))
 
+
+// 27. Dado un nombre completo (en string), obtén sus iniciales y sácalas también en una string
+
+let nombreCompleto = "Sergio Torres Garcia"
+let iniciales = []
+nombreCompleto.split(' ').map(e => iniciales.push(e[0]))
+
+console.log(iniciales.join(''))
 
 
 
