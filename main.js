@@ -339,45 +339,65 @@
 // y su número de teléfono. Utiliza una función para combinar ambos arrays y obtener un array nuevo
 // en que cada objeto contiene toda la información de cada persona.
 
-let arr1 = [
-    { nombre: "Nombre1", apellido: "Apellido1" },
-    { nombre: "Nombre2", apellido: "Apellido2" },
-    { nombre: "Nombre3", apellido: "Apellido3" }
+// let arr1 = [
+//     { nombre: "Nombre1", apellido: "Apellido1" },
+//     { nombre: "Nombre2", apellido: "Apellido2" },
+//     { nombre: "Nombre3", apellido: "Apellido3" }
+// ]
+// let arr2 = [
+//     { direccion: "carrer 1", telefono: 666111666, smthelse: "pin" },
+//     { direccion: "carrer 2", telefono: 666222666, smthelse: "pan" },
+//     { direccion: "carrer 3", telefono: 666333666, smthelse: "pun" }
+// ]
+
+// // usando map()
+// const juntarArrays1 = (arr1, arr2) => {
+//     if (arr1.length == arr2.length) {
+//         return arr1.map((persona, i) => {
+
+//             const personas = { ...persona, ...arr2[i] }
+//             return personas
+//         })
+//     } else {
+//         console.log("Data incomplete (arrays with different lengths)")
+//     }
+// }
+
+// // usando for
+// const juntarArrays2 = (arr1, arr2) => {
+//     if (arr1.length == arr2.length) {
+//         const personas = [];
+
+//         for (let i = 0; i < arr1.length; i++) {
+//             personas.push({ ...arr1[i], ...arr2[i] });
+//         }
+
+//         return personas;
+//     } else {
+//         console.log("Data incomplete (arrays with different lengths)")
+//     }
+// }
+// console.log(juntarArrays1(arr1, arr2))
+// console.log(juntarArrays2(arr1, arr2))
+
+
+// 23. Dado el objeto combinado del ejercicio anterior, crea una función que saque cada uno de los
+// objetos excluyendo la edad de la persona. Es decir, debo ver todas las propiedades de cada objeto
+// menos la edad. Hazlo utilizando el operador ...
+
+let personas = [
+    { nombre: 'Nombre1', apellido: 'Apellido1', direccion: 'carrer 1', telefono: 666111666, smthelse: 'pin' },
+    { nombre: 'Nombre2', apellido: 'Apellido2', direccion: 'carrer 2', telefono: 666222666, smthelse: 'pan' },
+    { nombre: 'Nombre3', apellido: 'Apellido3', direccion: 'carrer 3', telefono: 666333666, smthelse: 'pun' }
 ]
-let arr2 = [
-    { direccion: "carrer 1", telefono: 666111666, smthelse: "pin" },
-    { direccion: "carrer 2", telefono: 666222666, smthelse: "pan" },
-    { direccion: "carrer 3", telefono: 666333666, smthelse: "pun" }
-]
 
-// usando map()
-const juntarArrays1 = (arr1, arr2) => {
-    if (arr1.length == arr2.length) {
-        return arr1.map((persona, i) => {
-
-            const personas = { ...persona, ...arr2[i] }
-            return personas
-        })
-    } else {
-        console.log("Data incomplete (arrays with different lengths)")
-    }
+const sinEdad = (arr, apellido) => {
+    return arr.map(
+        ({ apellido, ...rest }) => rest
+    )
 }
+console.log(sinEdad(personas))
 
-// usando for
-const juntarArrays2 = (arr1, arr2) => {
-    if (arr1.length == arr2.length) {
-        const personas = [];
 
-        for (let i = 0; i < arr1.length; i++) {
-            personas.push({ ...arr1[i], ...arr2[i] });
-        }
-
-        return personas;
-    } else {
-        console.log("Data incomplete (arrays with different lengths)")
-    }
-}
-console.log(juntarArrays1(arr1, arr2))
-console.log(juntarArrays2(arr1, arr2))
 
 
