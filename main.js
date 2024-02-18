@@ -310,14 +310,32 @@
 // 20. Escribe una función que me diga si un alumno está aprobado o no, a la cual puedo pasar
 // cualquier cantidad de notas como parámetro
 
-const Aprovado = (...args) => {
-    let arr = [...args]
-    let total = 0
-    for (x of arr) {
-        total += x
-    }
-    let media = total / arr.length
-    return media >= 5 ? `aprovado con una nota de ${media}` : `suspenso con una nota de ${media}`
+// const Aprovado = (...args) => {
+//     let arr = [...args]
+//     let total = 0
+//     for (x of arr) {
+//         total += x
+//     }
+//     let media = total / arr.length
+//     return media >= 5 ? `aprovado con una nota de ${media}` : `suspenso con una nota de ${media}`
+// }
+// console.log(Aprovado(2, 3, 8, 9, 2))
+// console.log(Aprovado(2, 8, 9, 3))
+
+
+// 21. Escribe una función que reciba un array de números como argumento y saque la diferencia
+// entre el número más alto y el más bajo del mismo. Utiliza el operador ...
+
+
+const Resta = (arr) => {
+    // let arr1 = []
+    // for (x of arr) { arr1.push(parseInt(x)) }
+    let arr1 = arr.sort(function (a, b) { return a - b })
+
+    return eval(arr1[arr1.length - 1] - arr1[0])
 }
-console.log(Aprovado(2, 3, 8, 9, 2))
-console.log(Aprovado(2, 8, 9, 3))
+console.log(Resta([12, 98, 27, 9]))
+
+
+
+
