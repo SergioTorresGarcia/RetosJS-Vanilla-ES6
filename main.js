@@ -428,8 +428,8 @@
 // const noms30 = []
 // personas.map(e => { if (e.edad > 30) { noms30.push(e.nombre) } })
 
-console.log(nombres)
-console.log(noms30)
+// console.log(nombres)
+// console.log(noms30)
 
 
 // 26. Dado un array de números, crea una función que sume solo los pares
@@ -446,12 +446,36 @@ console.log(noms30)
 
 // 27. Dado un nombre completo (en string), obtén sus iniciales y sácalas también en una string
 
-let nombreCompleto = "Sergio Torres Garcia"
-let iniciales = []
-nombreCompleto.split(' ').map(e => iniciales.push(e[0]))
+// let nombreCompleto = "Sergio Torres Garcia"
+// let iniciales = []
+// nombreCompleto.split(' ').map(e => iniciales.push(e[0]))
 
-console.log(iniciales.join(''))
+// console.log(iniciales.join(''))
 
+
+// 28. Saca únicamente los nombres de los estudiantes que tengan una media por encima de 9
+let estudiantes = [
+    { nombre: 'Mara', notas: [10, 7, 8, 8, 9] },
+    { nombre: 'David', notas: [6, 2, 5, 10, 7] },
+    { nombre: 'Marcos', notas: [3, 5, 2, 8, 5] },
+    { nombre: 'Pablo', notas: [10, 10, 9, 8, 9] },
+];
+
+let best = []
+const bestStudents = (obj) => {
+    obj.map(e => {
+        let largo = e.notas.length
+        let total = 0
+        for (x of e.notas) {
+            total += x
+        }
+        let media = total / largo
+        // return media
+        return media > 9 ? best.push(e.nombre) : false
+    })
+    return best
+}
+console.log(bestStudents(estudiantes))
 
 
 
